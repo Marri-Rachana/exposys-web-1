@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!--skip-->
+        <title>chat</title>
+        <link rel="stylesheet" type="text/css" href="../easyrtc/easyrtc.css" />
+
+        <!--hide-->
+        <link rel="stylesheet" type="text/css" href="css/landing.css" />
+
+
+        <!--show-->
+        <!-- Assumes global locations for socket.io.js and easyrtc.js -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="../easyrtc/easyrtc.js"></script>
+        <script type="text/javascript" src="js/demo_data_channel_messaging.js"></script>
+        <!--hide-->
+        <!-- Styles used within the demo -->
+        <style type="text/css">
+            .alert img {
+                float:left;
+                padding-right: 10px;
+            }
+       @media only screen and (max-width:480px)
+        {
+            #sendMessageArea{
+                float:left;
+                width:300px;
+                padding-right:20px;
+            }
+          #conversation {
+                height:100px;
+                border:solid 1px gray;
+                overflow-y:scroll;
+            }
+         }
+       @media only screen and (min-width:481px) and (max-width:900px)
+        {
+            #sendMessageArea{
+                float:left;
+                width:400px;
+                padding-right:20px;
+            }
+           #conversation {
+                height:200px;
+                border:solid 1px gray;
+                overflow-y:scroll;
+            }
+           }
+@media only screen and (min-width:901px)
+        {
+            #sendMessageArea{
+                float:left;
+                width:400px;
+                padding-right:20px;
+            }
+           #conversation {
+                height:400px;
+                border:solid 1px gray;
+                overflow-y:scroll;
+            }
+           }
+            #sendMessageText{
+                width:100%;
+            }
+            
+        </style>
+        <!--show-->
+    </head>
+    <body onload="connect()">
+        <!--hide-->
+        <div  class="container-fluid">
+            <div id="header">
+    <div class="col-sm-12" style="background-color:lavender;border-color:coral;border-style:solid;border-width:5px"><a href="index.html"><img id="logo_exposys" src="images/explogo.jpeg" alt="exposyslogo" style="" /></a></div>
+</div></div>
+<br>
+  <hr />
+<div class="container-fluid" style="background-color:lavender;">
+            <div id="main">
+
+          <!--show-->
+                <div id="sendMessageArea">
+                    <div id="iam">Obtaining ID...</div>
+                    <textarea id="sendMessageText"></textarea>
+                    <div id="otherClients"></div>
+                </div>
+                <div id="receiveMessageArea">
+                    Received Messages:
+                    <div id="conversation"></div>
+                </div>
+</div>
+</div>
+          <!--hide-->
+
+                <hr />
+
+              
+         
+            <br><br><br>
+<div class="container-fluid">
+<div id="main1">
+<div class="col-sm-12"><marquee behavior="scroll" direction="left" bgcolor="lavender" style="font-size:25px;color:black;font-weight:15px;border-style:inset;border-radius:25px;border-color:coral;">FOR RECENT CHAT SCROLL DOWN AND ON LEFT SIDE YOU CAN SEE YOUR ONLINE FRIENDS</marquee></div>
+</div></div>
+
+        <!--show-->
+    </body>
+</html>
